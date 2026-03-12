@@ -10,12 +10,12 @@ def home():
     return {
         "message": "Flask migrations lesson app",
         "endpoints": [
-            "GET /students",
-            "POST /students",
-            "GET /assignments",
-            "POST /assignments",
-            "GET /grades",
-            "POST /grades",
+            "GET /exercises/students",
+            "POST /exercises/students",
+            "GET /exercises/assignments",
+            "POST /exercises/assignments",
+            "GET /exercises/grades",
+            "POST /exercises/grades",
         ],
     }
 

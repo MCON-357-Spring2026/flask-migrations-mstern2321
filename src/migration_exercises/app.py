@@ -19,7 +19,7 @@ def create_app():
     # TODO 2:
     # Initialize Flask-Migrate with the app and database.
 
-
+    #Note the url_prefix -> all the routes associated with this blueprint will start with /exercises
     app.register_blueprint(api, url_prefix="/exercises")
 
     return app
