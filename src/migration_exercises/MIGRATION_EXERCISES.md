@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ## Part 2: Complete the app setup TODOs
 
-Open `src/migration_exercise/app.py`.
+Open `src/migration_exercises/app.py`.
 
 ### TODO 1
 
@@ -57,7 +57,7 @@ When you are done, your app factory should connect both extensions.
 
 ## Part 3: Complete the manage file TODO
 
-Open `src/migration_exercise/manage.py`.
+Open `src/migration_exercises/manage.py`.
 
 ### TODO 3
 
@@ -69,7 +69,7 @@ Flask-Migrate compares the database schema to the SQLAlchemy models it knows abo
 
 From the project root, run:
 ```bash
-flask --app src.migration_exercise.manage db init
+flask --app src.migration_exercises.manage db init
 ```
 This creates the migrations/ folder.
 Add it to git so it is tracked by version control:
@@ -174,7 +174,7 @@ You should see logic that adds:
 
 ## Part 8: Update the JSON output
 
-Open src/migration_exercise/models.py.
+Open src/migration_exercises/models.py.
 
 ### TODO 8
 
@@ -197,11 +197,11 @@ GET /exercies/grades should include comment
 
 Part 9: Update the POST routes
 
-Open src/migration_exercise/routes.py.
+Open src/migration_exercises/routes.py.
 
 ### TODO 10
 
-Modify the POST /exercies/assignments route so it accepts due_date from the request body.
+Modify the POST /exercises/assignments route so it accepts due_date from the request body.
 
 Use ISO format strings such as:
 ```html
@@ -219,7 +219,7 @@ from datetime import date
 parsed_date = date.fromisoformat(due_date_string)
 ### TODO 11
 
-Modify the POST /grades route so it accepts an optional comment from the request body.
+Modify the POST /exercises/grades route so it accepts an optional comment from the request body.
 
 Example request:
 ```html
@@ -234,11 +234,11 @@ Example request:
 
 Start the app again if needed:
 ```bash
-flask --app src.migration_exercise.manage run
+flask --app src.migration_exercises.manage run
 ```
 Now create an assignment with a due date:
 ```html
-POST /exercies/assignments
+POST /exercises/assignments
 Content-Type: application/json
 {
 "title": "ORM Practice2",
@@ -248,7 +248,7 @@ Content-Type: application/json
 ```
 Then create a grade with a comment:
 ```html
-POST /exercies/grades
+POST /exercises/grades
 Content-Type: application/json
 {
 "score": 95,
@@ -259,11 +259,11 @@ Content-Type: application/json
 ```
 Then test in browser or postman that the new fields appear in the responses for:
 
-GET /exercies/assignments
+GET /exercises/assignments
 
 and
 
-GET /exercies/grades
+GET /exercises/grades
 
 Make sure the responses include the new fields.
 
