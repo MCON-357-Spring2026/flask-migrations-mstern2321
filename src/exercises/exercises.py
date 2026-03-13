@@ -99,7 +99,7 @@ def get_assignment_by_title(title: str) -> Optional[Assignment]:
 
 def get_student_grades(student_id: int) -> list[Grade]:
     """TODO: Return all grades for a student, ordered by assignment title.
-
+    KNOW THIS FOR TEST!
     If student doesn't exist: raise LookupError
     """
     student = db.session.get(Student, student_id)
